@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="179e135e-a493-4a39-b8f5-a22f3d2c3d2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/AbstractRequestInterceptor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/AbstractResponseInterceptor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/ConfigManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Console/Commands/GreetCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Console/Commands/MigrateCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Console/Commands/MigrateRollbackCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Console/Commands/ResourceCreateCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Environment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/FormValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Migration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/Route.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/RouteManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/RouteNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/View/Adapter/TwigAdapter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/View/Extensions/AppExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Core/View/View.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tufu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state relative-caret-position="17">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -117,6 +97,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -156,12 +137,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554837975342</updated>
-      <workItem from="1554837976914" duration="2119000" />
+      <workItem from="1554837976914" duration="2724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2119000" />
+    <option name="totallyTimeSpent" value="2724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -216,8 +197,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
