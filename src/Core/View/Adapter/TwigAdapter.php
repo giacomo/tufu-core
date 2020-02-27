@@ -2,7 +2,7 @@
 /**
  * Project      tufu
  * @author      Giacomo Barbalinardo <info@ready24it.eu>
- * @copyright   2015
+ * @copyright   2020
  */
 
 namespace Tufu\Core\View\Adapter;
@@ -10,7 +10,8 @@ namespace Tufu\Core\View\Adapter;
 use Tufu\Core\ConfigManager;
 use Tufu\Core\View\Extensions\AppExtension;
 use Tufu\Core\View\View;
-use Twig_Extensions_Extension_Text;
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
 
 class TwigAdapter extends View
 {
@@ -18,12 +19,11 @@ class TwigAdapter extends View
 
     public function __construct()
     {
-        $loader = new \Twig_Loader_Filesystem('../app/views');
-        $this->twig = new \Twig_Environment($loader, array(
+        $loader = new FilesystemLoader('../app/views');
+        $this->twig = new Environment($loader, array(
             'debug' => ConfigManager::get('debug'),
 //            'cache' => '../storage/template_cache',
         ));
-        $this->twig->addExtension(new Twig_Extensions_Extension_Text());
         $this->twig->addExtension(new AppExtension());
     }
 

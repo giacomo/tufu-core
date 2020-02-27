@@ -1,7 +1,7 @@
 {
     "name": "ready24it/tufu-core",
     "description": "core for tufu-framework",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "type": "project",
     "require": {
         "league/flysystem": "^1.0",
