@@ -11,17 +11,19 @@ use Exception;
 use Tufu\Core\ConfigManager;
 use Tufu\Core\Route;
 use Tufu\Core\RouteManager;
-use Twig_Environment;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class AppExtension extends \Twig_Extension
+class AppExtension extends AbstractExtension
 {
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('route', array($this, 'getRoute')),
-            new \Twig_SimpleFunction('asset', array($this, 'getAsset')),
-            new \Twig_SimpleFunction('dump', array($this, 'getDump'), array('needs_environment' => true)),
-            new \Twig_SimpleFunction('has_error', array($this, 'hasError')),
+            new TwigFunction('route', array($this, 'getRoute')),
+            new TwigFunction('asset', array($this, 'getAsset')),
+            new TwigFunction('dump', array($this, 'getDump'), array('needs_environment' => true)),
+            new TwigFunction('has_error', array($this, 'hasError')),
         );
     }
 
@@ -80,7 +82,7 @@ class AppExtension extends \Twig_Extension
         return $fileName;
     }
 
-    public function getDump(Twig_Environment $env, $var)
+    public function getDump(Environment $env, $var)
     {
         if (!$env->isDebug()) {
             return '';

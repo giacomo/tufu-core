@@ -1,0 +1,6 @@
+FROM php:7-fpm
+RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer;
+
+RUN apt-get update
+RUN apt-get -y install curl gnupg libzip-dev unzip
+RUN docker-php-ext-install zip
