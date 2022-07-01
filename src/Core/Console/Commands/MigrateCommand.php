@@ -27,17 +27,24 @@ class MigrateCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $files = $this->getFiles();
-        foreach ($files as $file) {
-            include $this->getMigrationPath() . '/' . $file;
+        try {
+            $files = $this->getFiles();
+            foreach ($files as $file) {
+                include $this->getMigrationPath() . '/' . $file;
 
-            $className = str_replace('.php', '', $file);
+                $className = str_replace('.php', '', $file);
 
-            /** @var Migration $migration */
-            $migration = new $className();
-            $migration->up();
+                /** @var Migration $migration */
+                $migration = new $className();
+                $migration->up();
 
-            $output->writeln($file . ' migrated.');
+                $output->writeln($file . ' migrated.');
+            }
+
+            return Command::SUCCESS;
+        } catch(\Exception $e) {
+            $output->writeln($e->getMessage());
+            return Command::FAILURE;
         }
     }
 

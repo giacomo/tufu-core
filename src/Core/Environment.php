@@ -29,7 +29,7 @@ class Environment
      */
     private function loadEnvironment()
     {
-        $this->dotEnv = Dotenv::create($this->basePath);
+        $this->dotEnv = Dotenv::createUnsafeImmutable($this->basePath);
         $this->dotEnv->load();
     }
 

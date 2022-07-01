@@ -9,7 +9,7 @@ namespace Tufu;
 
 
 use Exception;
-use Lindelius\JWT\Exception\InvalidJwtException;
+use Firebase\JWT\ExpiredException;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Tufu\Core\ConfigManager;
@@ -58,7 +58,7 @@ class Tufu
         } catch (Exception $e) {
             $exceptionCode = $e->getCode();
 
-            if ($e instanceof InvalidJwtException) {
+            if ($e instanceof ExpiredException) {
                 $exceptionCode = 401;
             }
 
