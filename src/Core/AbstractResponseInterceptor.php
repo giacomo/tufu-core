@@ -10,5 +10,5 @@ namespace Tufu\Core;
 
 abstract class AbstractResponseInterceptor
 {
-    abstract function beforeResponse(&$response);
+    abstract function beforeResponse(&$response, &$request);
 }
