@@ -49,7 +49,7 @@ class Tufu
                     $response = new Response($response);
                 }
 
-                $this->invokeResponseListener($response);
+                $this->invokeResponseListener($response, $request);
                 $response->send();
             } else {
                 throw new RouteNotFoundException();
@@ -82,14 +82,14 @@ class Tufu
         return $this->database;
     }
 
-    private function invokeResponseListener(Response &$response)
+    private function invokeResponseListener(Response &$response, Request &$request)
     {
         $route = $this->routeManager->getResolvedRoute();
         $listener = $route->getMetaListener();
 
         if (array_key_exists('response', $listener)) {
             foreach ($listener['response'] as $responseListener) {
-                call_user_func_array([new $responseListener, 'beforeResponse'], array(&$response));
+                call_user_func_array([new $responseListener, 'beforeResponse'], array(&$response, &$request));
             }
         }
 
