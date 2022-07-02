@@ -1,7 +1,7 @@
 {
     "name": "giacomo/tufu-core",
     "description": "core for tufu-framework",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "type": "project",
     "require": {
         "league/flysystem": "^3.1",
